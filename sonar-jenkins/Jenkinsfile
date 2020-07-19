@@ -28,6 +28,7 @@ pipeline {
                 bat 'mvn -B -DskipTests install'
             }
         }
+		
         stage('Test') {
             steps {
                 bat 'mvn test'
@@ -38,6 +39,13 @@ pipeline {
                 }
             }
         }
+		
+		stage('Pipeline Echo') {
+            steps {
+                echo 'Your configuration is working'
+            }
+        }
+		
        /* stage('Deliver') {
             steps {
                 bat './jenkins/scripts/deliver.sh'
