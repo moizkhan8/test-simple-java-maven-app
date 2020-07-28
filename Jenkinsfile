@@ -4,7 +4,7 @@ pipeline {
         }
 		
 	triggers {
-        cron(env.BRANCH_NAME == 'master' ? 'H/2 * * * *' : '')
+        cron('H/2 * * * *')
     }	
     
     stages {
