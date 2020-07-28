@@ -3,9 +3,9 @@ pipeline {
 			label 'master'
         }
 		
-	triggers {
+	/*triggers {
         cron('H/2 * * * *')
-    }	
+    } */	
     
     stages {
 	
