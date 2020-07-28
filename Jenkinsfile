@@ -2,6 +2,10 @@ pipeline {
     agent {
 			label 'master'
         }
+		
+	triggers {
+        cron(env.BRANCH_NAME == 'master' ? 'H */2 * * *' : '')
+    }	
     
     stages {
 	
